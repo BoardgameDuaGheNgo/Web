@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>BoardgameDuaGheNgo</title>
+
+    <!-- slider stylesheet -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css"
+    />
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+    <!-- fonts style -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="css/responsive.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="hero_area sub_pages">
+      <!-- header section strats -->
+      <!-- header section strats -->
+      <header class="header_section">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+            <a class="navbar-brand" href="index.html">
+              <img src="images/LogoNew.png" alt="" />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div
+                class="d-flex ml-auto flex-column flex-lg-row align-items-center"
+              >
+                <ul class="navbar-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="index.html"
+                      >Trang chủ <span class="sr-only">(current)</span></a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="fruit.html"> Sản phẩm</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="service.html"> Dịch vụ </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Liên hệ</a>
+                  </li>
+                </ul>
+                <form
+                  class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0"
+                >
+                  <button
+                    class="btn my-2 my-sm-0 nav_search-btn"
+                    type="submit"
+                  ></button>
+                </form>
+              </div>
+              <div
+                class="quote_btn-container ml-0 ml-lg-4 d-flex justify-content-center"
+              >
+                <a href=""> Gọi ngay </a>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- end header section -->
+    </div>
+
+    <!-- contact section -->
+    <section
+      class="contact_section layout_padding"
+      style="font-family: Arial, sans-serif"
+    >
+      <div class="container">
+        <h2 class="font-weight-bold">ĐẶT HÀNG NGAY</h2>
+        <div class="row">
+          <div class="col-md-8 mr-auto">
+            <form id="contactForm">
+              <div class="contact_form-container">
+                <div style="display: flex; flex-direction: column; gap: 20px">
+                  <div>
+                    <input
+                      type="text"
+                      id="name"
+                      placeholder="Họ và tên"
+                      style="width: 100%; padding: 10px"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <input
+                      type="text"
+                      id="phone"
+                      placeholder="Số điện thoại"
+                      style="width: 100%; padding: 10px"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <input
+                      type="email"
+                      id="email"
+                      placeholder="Email"
+                      style="width: 100%; padding: 10px"
+                      required
+                    />
+                  </div>
+                  <!-- Address field -->
+                  <div>
+                    <input
+                      type="text"
+                      id="address"
+                      name="address"
+                      placeholder="Địa chỉ"
+                      style="width: 100%; padding: 10px"
+                      required
+                    />
+                  </div>
+                  <!-- Product selection dropdown -->
+                  <div>
+                    <label for="product">Chọn sản phẩm:</label>
+                    <select
+                      id="product"
+                      style="width: 100%; padding: 10px"
+                      required
+                    >
+                      <option value="" disabled selected>Chọn sản phẩm</option>
+                      <option value="Khóm sấy" data-price="89000">
+                        Khóm sấy - 89k
+                      </option>
+                      <option value="Thanh long sấy" data-price="50000">
+                        Thanh long sấy - 50k (đã hết hàng)
+                      </option>
+                      <option value="Xoài sấy" data-price="59000">
+                        Xoài sấy - 59k
+                      </option>
+                    </select>
+                  </div>
+                  <!-- Quantity input field -->
+                  <div>
+                    <input
+                      type="number"
+                      id="quantity"
+                      placeholder="Số lượng"
+                      min="1"
+                      style="width: 100%; padding: 10px"
+                      required
+                    />
+                  </div>
+                  <!-- Display total price -->
+                  <div>
+                    <label for="totalPrice">Thành tiền: </label>
+                    <input
+                      type="text"
+                      id="totalPrice"
+                      placeholder="Thành tiền"
+                      style="width: 100%; padding: 10px"
+                      readonly
+                    />
+                  </div>
+                  <!-- Submit button -->
+                  <div style="text-align: center">
+                    <button
+                      type="submit"
+                      style="
+                        padding: 10px 20px;
+                        background-color: #28a745;
+                        color: white;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                      "
+                    >
+                      Gửi
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer style="background-color: #333; color: white; padding: 20px">
+      <div class="container">
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: flex-start;
+          "
+        >
+          <!-- Logo and Company Info -->
+          <div style="flex-basis: 30%; padding: 10px">
+            <h4 style="color: #ee9972">
+              SunFruit - Vị ngọt từ thiên nhiên, nâng tầm nông sản Việt
+            </h4>
+            <p>Bringing nature's sweetness to your table.</p>
+          </div>
+
+          <!-- Quick Links -->
+          <div style="flex-basis: 20%; padding: 10px">
+            <h4 style="color: #ee9972">Quick Links</h4>
+            <ul style="list-style-type: none; padding: 0">
+              <li>
+                <a
+                  href="index.html"
+                  class="footer-link"
+                  style="color: white; text-decoration: none"
+                  >Trang Chủ</a
+                >
+              </li>
+              <li>
+                <a
+                  href="fruit.html"
+                  class="footer-link"
+                  style="color: white; text-decoration: none"
+                  >Sản Phẩm</a
+                >
+              </li>
+              <li>
+                <a
+                  href="service.html"
+                  class="footer-link"
+                  style="color: white; text-decoration: none"
+                  >Dịch Vụ</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="footer-link"
+                  style="color: white; text-decoration: none"
+                  >Liên Hệ</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div style="flex-basis: 25%; padding: 10px">
+            <h4 style="color: #ee9972">Contact Us</h4>
+            <p>Email: Sunfruit.muoi@gmail.com</p>
+            <p>Facebook: SunFruit</p>
+            <p>Địa Chỉ: Ninh Kiều, Cần Thơ, Việt Nam</p>
+          </div>
+
+          <!-- Social Links -->
+          <div style="flex-basis: 20%; padding: 10px">
+            <h4 style="color: #ee9972">Follow Us On</h4>
+            <div class="social-box" style="display: flex">
+              <a
+                href="https://www.facebook.com/profile.php?id=61566823078449"
+                style="margin-right: 10px"
+              >
+                <img
+                  src="images/fb.png"
+                  alt="Facebook"
+                  style="filter: invert(100%)"
+                  width="20"
+                />
+              </a>
+              <a href="" style="margin-right: 10px">
+                <img
+                  src="images/tiktokpng.png"
+                  alt="Tiktok"
+                  style="filter: invert(100%)"
+                  width="20"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: 20px">
+          <p>© 2024 FPT University. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <script>
+    // Update total price when product or quantity is changed
+    document
+      .getElementById("product")
+      .addEventListener("change", calculateTotal);
+    document
+      .getElementById("quantity")
+      .addEventListener("input", calculateTotal);
+
+    function calculateTotal() {
+      var product = document.getElementById("product");
+      var selectedProduct = product.options[product.selectedIndex];
+      var price = selectedProduct
+        ? parseInt(selectedProduct.getAttribute("data-price"))
+        : 0;
+      var quantity = parseInt(document.getElementById("quantity").value) || 0;
+      var totalPrice = price * quantity;
+      document.getElementById("totalPrice").value = totalPrice
+        ? formatCurrency(totalPrice)
+        : "";
+    }
+    function formatCurrency(amount) {
+      if (amount >= 1000) {
+        return amount / 1000 + "k VND";
+      }
+      return amount + " VND";
+    }
+
+    var stringFetch =
+      "https://script.google.com/macros/s/AKfycbw92LtNK1L4HmlNbN8ThXXDdbeA3LIA4w1Pqrqn4x7mJv7yW0rfVgOSalexPYtBZwN7zQ/exec";
+    var stringFetch1 =
+      "https://script.google.com/macros/s/AKfycbwaYs9cnv0SB9TcQ27NsnAUeMQu-rfHodXM5LKjOJY4j4GmcKfRWSpFoariHfPnljgv/exec";
+    // Handle form submission
+
+    document
+      .getElementById("contactForm")
+      .addEventListener("submit", function (e) {
+        e.preventDefault();
+        // Collect form data
+        var address = document.getElementById("address").value;
+        var name = document.getElementById("name").value;
+        var phone = document.getElementById("phone").value;
+        var email = document.getElementById("email").value;
+        var product = document.getElementById("product").value;
+        var quantity = document.getElementById("quantity").value;
+        var totalPrice = document.getElementById("totalPrice").value;
+
+        // Create the data string
+        var data = new URLSearchParams();
+        data.append("name", name);
+        data.append("phone", phone);
+        data.append("address", address);
+        data.append("email", email);
+        data.append("product", product);
+        data.append("quantity", quantity);
+        data.append("totalPrice", totalPrice);
+        console.log([...data.entries()]); // In ra tất cả dữ liệu trước khi gửi
+
+        // Send form data to Google Sheets via Apps Script API
+        fetch(stringFetch1, {
+          method: "POST",
+          body: data,
+        })
+          .then((response) => response.text())
+          .then((result) => {
+            alert("Cảm ơn bạn đã mua hàng :>");
+            // Clear the form
+            document.getElementById("contactForm").reset();
+            document.getElementById("totalPrice").value = "";
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+      });
+  </script>
+</html>
