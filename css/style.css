@@ -357,7 +357,7 @@ a:focus {
 /* Hình ảnh thành viên */
 .team_member img {
   width: 100px;
-  height: 100px;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
 }
 .slider_img-box1 img {
