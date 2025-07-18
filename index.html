@@ -137,7 +137,7 @@
                   <div class="slider_img-box1">
                     <div>
                       <img
-                        src="images/Untitled_Artwork.png"
+                        src="images/Untitled_Artwork_Game.png"
                         alt=""
                         class="imgSlide"
                       />
@@ -690,14 +690,14 @@
         data.append("totalPrice", totalPrice);
         console.log([...data.entries()]); // In ra tất cả dữ liệu trước khi gửi
 
+        var stringFetch1 =
+          "https://script.google.com/macros/s/AKfycbwaYs9cnv0SB9TcQ27NsnAUeMQu-rfHodXM5LKjOJY4j4GmcKfRWSpFoariHfPnljgv/exec";
+
         // Send form data to Google Sheets via Apps Script API
-        fetch(
-          "https://script.google.com/macros/s/AKfycbw92LtNK1L4HmlNbN8ThXXDdbeA3LIA4w1Pqrqn4x7mJv7yW0rfVgOSalexPYtBZwN7zQ/exec",
-          {
-            method: "POST",
-            body: data,
-          }
-        )
+        fetch(stringFetch1, {
+          method: "POST",
+          body: data,
+        })
           .then((response) => response.text())
           .then((result) => {
             alert("Cảm ơn bạn đã mua hàng :>");
