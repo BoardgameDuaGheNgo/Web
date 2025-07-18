@@ -46,26 +46,26 @@ body {
   width: 145px;
   outline: none;
   color: #f7f7f7;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
 }
 
 .custom_dark-btn {
-  background-color: #000000;
+  background-color: #221f1f;
 }
 
 .custom_dark-btn:hover {
-  border: 1px solid #000000;
-  color: #000000;
+  border: 2px solid #221f1f;
+  color: #221f1f;
   background-color: transparent;
 }
 
 .custom_orange-btn {
-  background-color: #fc5d35;
+  background-color: #dee11d;
 }
 
 .custom_orange-btn:hover {
-  border: 1px solid #fc5d35;
-  color: #fc5d35;
+  border: 2px solid #dee11d;
+  color: #dee11d;
   background-color: transparent;
 }
 
@@ -105,6 +105,10 @@ body {
   padding: 10px 30px;
   color: #dee11d;
   text-align: center;
+}
+
+.custom_nav-container.navbar-expand-lg .navbar-nav .nav-link:hover {
+  color: #fafcfd;
 }
 
 a,
@@ -185,6 +189,13 @@ a:focus {
   text-transform: uppercase;
   border-radius: 2px;
   text-align: center;
+  border: 1px solid transparent;
+}
+
+.quote_btn-container a:hover {
+  border: 1px solid #dee11d;
+  background-color: #221f1f;
+  color: #dee11d;
 }
 
 /*end header section*/
@@ -299,7 +310,8 @@ a:focus {
 }
 
 .service_section .card .card-title {
-  color: #fc5d35;
+  color: #dee11d;
+  font-weight: bold;
 }
 
 .service_section .card::after {
@@ -320,7 +332,7 @@ a:focus {
 }
 
 .service_section .card:hover::after {
-  background-color: #fc5d35;
+  background-color: #dee11d;
 }
 
 /* end service section */
@@ -558,13 +570,13 @@ a:focus {
 }
 
 .footer-link:hover {
-  color: #ee9972 !important;
+  color: #dee11d !important;
 
   text-decoration: underline !important;
 }
 
 .footer-link:active {
-  color: #ee9972 !important;
+  color: #dee11d !important;
   /* Màu khi click */
   text-decoration: underline !important;
   /* Giữ gạch chân khi click */
