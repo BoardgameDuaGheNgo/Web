@@ -119,11 +119,11 @@
                   <div class="slider_item-detail">
                     <div>
                       <h1>ĐuaGheNgo<br /></h1>
-                      <p>
+                      <!-- <p>
                         Tận hưởng vị ngọt tự nhiên và giá trị dinh dưỡng nguyên
                         bản từ những trái cây tươi ngon, sấy khô tự nhiên, bảo
                         vệ sức khỏe và thân thiện với môi trường.
-                      </p>
+                      </p> -->
                       <div class="d-flex">
                         <a
                           href="contact.html"
@@ -180,11 +180,19 @@
                 <div class="card-body">
                   <h5 class="card-title">Giới thiệu</h5>
                   <p class="card-text">
-                    SunFruit chuyên cung cấp nông sản sấy dẻo chất lượng cao từ
-                    trái cây Việt Nam như xoài, khóm. Sản phẩm giữ trọn hương vị
-                    tự nhiên, giàu dinh dưỡng, mang đến lựa chọn lành mạnh, tiện
-                    lợi cho người tiêu dùng, gắn liền với câu chuyện nông sản
-                    bền vững.
+                    Đua Ghe Ngo – một board game chiến thuật đầy sống động, nơi
+                    bạn sẽ được hòa mình vào không khí lễ hội Ok Om Bok tưng
+                    bừng và khám phá nét đẹp văn hóa độc đáo của đồng bào Khmer
+                    tại miền Tây Nam Bộ Việt Nam!<br />
+                    Trò chơi này không chỉ là giảitrí đơn thuần; đó là một hành
+                    trình tái hiện cuộc tranh tài quyết liệt giữa những chiếc
+                    ghe ngo truyền thống, được điều khiển bởi những tay chèo
+                    mạnh mẽ và tinh thần đoàn kết. Bạn sẽ cần vận dụng tư duy
+                    chiến thuật để lựa chọn đội hình, khéo léo sử dụng các lá
+                    bài kỹ năng và đối phó với những thử thách bất ngờ từ dòng
+                    sông. Mỗi lượt đi, mỗi quyết định đều đưa bạn đến gần hơn
+                    với chiến thắng vinh quang, cảm nhận rõ nét sự hưng phấn của
+                    một cuộc đua mang đậm bản sắc.
                   </p>
                 </div>
               </div>
@@ -198,10 +206,12 @@
                 <div class="card-body">
                   <h5 class="card-title">Tầm nhìn</h5>
                   <p class="card-text">
-                    SunFruit hướng đến trở thành thương hiệu hàng đầu về nông
-                    sản sấy dẻo, nâng tầm nông sản Việt trên thị trường quốc tế.
-                    Công ty mong muốn góp phần phát triển ngành nông sản bền
-                    vững, bảo vệ môi trường và nâng cao đời sống nông dân.
+                    Chúng tôi ấp ủ ước mơ biến Đua Ghe Ngo thành board game văn
+                    hóa hàng đầu Việt Nam. Không chỉ được cộng đồng người chơi
+                    trong nước yêu mến, chúng tôi còn mong muốn đây sẽ là một
+                    cầu nối văn hóa độc đáo, giới thiệu vẻ đẹp và tinh hoa của
+                    dân tộc Khmer nói riêng, cũng như bản sắc Việt Nam nói
+                    chung, đến với bạn bè quốc tế.
                   </p>
                 </div>
               </div>
@@ -215,10 +225,15 @@
                 <div class="card-body">
                   <h5 class="card-title">Sứ mệnh</h5>
                   <p class="card-text">
-                    SunFruit cam kết cung cấp sản phẩm an toàn, giàu dinh dưỡng,
-                    hỗ trợ tiêu thụ nông sản địa phương, không dùng chất bảo
-                    quản và đảm bảo quy trình minh bạch. Mục tiêu là tạo giá trị
-                    bền vững cho cộng đồng và môi trường.
+                    Chúng tôi sứ mệnh sử dụng Đua Ghe Ngo để:<br />
+                    Bảo tồn & Lan tỏa Văn hóa: Giới thiệu và lan tỏa giá trị lễ
+                    hội Đua Ghe Ngo cùng văn hóa Khmer một cách sinh động, gần
+                    gũi.<br />
+                    Kết nối & Giáo dục: Tạo không gian gắn kết, rèn luyện tư duy
+                    và mang lại kiến thức về truyền thống qua giải trí.<br />
+                    Nâng tầm Board Game Việt: Góp phần phát triển thị trường
+                    board game trong nước, khẳng định vị thế của game Việt chất
+                    lượng cao.
                   </p>
                 </div>
               </div>
@@ -463,7 +478,7 @@
                       />
                     </div>
                     <!-- Product selection dropdown -->
-                    <div>
+                    <!-- <div>
                       <label for="product">Chọn sản phẩm:</label>
                       <select
                         id="product"
@@ -483,7 +498,7 @@
                           Xoài sấy - 59k
                         </option>
                       </select>
-                    </div>
+                    </div> -->
                     <!-- Quantity input field -->
                     <div>
                       <input
@@ -629,15 +644,17 @@
     function calculateTotal() {
       var product = document.getElementById("product");
       var selectedProduct = product.options[product.selectedIndex];
-      var price = selectedProduct
-        ? parseInt(selectedProduct.getAttribute("data-price"))
-        : 0;
+      // var price = selectedProduct
+      //   ? parseInt(selectedProduct.getAttribute("data-price"))
+      //   : 0;
+      var price = 0;
       var quantity = parseInt(document.getElementById("quantity").value) || 0;
       var totalPrice = price * quantity;
       document.getElementById("totalPrice").value = totalPrice
         ? formatCurrency(totalPrice)
         : "";
     }
+
     function formatCurrency(amount) {
       if (amount >= 1000) {
         return amount / 1000 + "k VND";
@@ -655,7 +672,7 @@
         var name = document.getElementById("name").value;
         var phone = document.getElementById("phone").value;
         var email = document.getElementById("email").value;
-        var product = document.getElementById("product").value;
+        // var product = document.getElementById("product").value;
         var quantity = document.getElementById("quantity").value;
         var totalPrice = document.getElementById("totalPrice").value;
 
@@ -665,7 +682,7 @@
         data.append("phone", phone);
         data.append("address", address);
         data.append("email", email);
-        data.append("product", product);
+        // data.append("product", product);
         data.append("quantity", quantity);
         data.append("totalPrice", totalPrice);
         console.log([...data.entries()]); // In ra tất cả dữ liệu trước khi gửi
