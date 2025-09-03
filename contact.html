@@ -156,7 +156,7 @@
                     />
                   </div>
                   <!-- Product selection dropdown -->
-                  <div>
+                  <!-- <div>
                     <label for="product">Chọn sản phẩm:</label>
                     <select
                       id="product"
@@ -174,7 +174,7 @@
                         Xoài sấy - 59k
                       </option>
                     </select>
-                  </div>
+                  </div> -->
                   <!-- Quantity input field -->
                   <div>
                     <input
@@ -220,15 +220,13 @@
           "
         >
           <!-- Logo and Company Info -->
-          <div style="flex-basis: 30%; padding: 10px">
-            <h4 style="color: #dee11d">
-              SunFruit - Vị ngọt từ thiên nhiên, nâng tầm nông sản Việt
-            </h4>
-            <p>Bringing nature's sweetness to your table.</p>
+          <div style="padding: 5px">
+            <h4 style="color: #dee11d">Đua Ghe Ngo</h4>
+            <p>Chèo nhanh – Lật thế – Về đích trước !</p>
           </div>
 
           <!-- Quick Links -->
-          <div style="flex-basis: 20%; padding: 10px">
+          <div style="padding: 5px">
             <h4 style="color: #dee11d">Quick Links</h4>
             <ul style="list-style-type: none; padding: 0">
               <li>
@@ -267,7 +265,7 @@
           </div>
 
           <!-- Contact Info -->
-          <div style="flex-basis: 25%; padding: 10px">
+          <div style="padding: 5px">
             <h4 style="color: #dee11d">Contact Us</h4>
             <p>Email: dgn.boardgame@gmail.com</p>
             <p>Facebook: Boardgame Đua Ghe Ngo</p>
@@ -275,7 +273,7 @@
           </div>
 
           <!-- Social Links -->
-          <div style="flex-basis: 20%; padding: 10px">
+          <div style="padding: 5px">
             <h4 style="color: #dee11d">Follow Us On</h4>
             <div class="social-box" style="display: flex">
               <a
@@ -309,19 +307,20 @@
 
   <script>
     // Update total price when product or quantity is changed
-    document
-      .getElementById("product")
-      .addEventListener("change", calculateTotal);
+    // document
+    //   .getElementById("product")
+    //   .addEventListener("change", calculateTotal);
     document
       .getElementById("quantity")
       .addEventListener("input", calculateTotal);
 
     function calculateTotal() {
-      var product = document.getElementById("product");
-      var selectedProduct = product.options[product.selectedIndex];
-      var price = selectedProduct
-        ? parseInt(selectedProduct.getAttribute("data-price"))
-        : 0;
+      // var product = document.getElementById("product");
+      // var selectedProduct = product.options[product.selectedIndex];
+      // var price = selectedProduct
+      //   ? parseInt(selectedProduct.getAttribute("data-price"))
+      //   : 0;
+      var price = 10000;
       var quantity = parseInt(document.getElementById("quantity").value) || 0;
       var totalPrice = price * quantity;
       document.getElementById("totalPrice").value = totalPrice
@@ -335,10 +334,6 @@
       return amount + " VND";
     }
 
-    var stringFetch =
-      "https://script.google.com/macros/s/AKfycbw92LtNK1L4HmlNbN8ThXXDdbeA3LIA4w1Pqrqn4x7mJv7yW0rfVgOSalexPYtBZwN7zQ/exec";
-    var stringFetch1 =
-      "https://script.google.com/macros/s/AKfycbwaYs9cnv0SB9TcQ27NsnAUeMQu-rfHodXM5LKjOJY4j4GmcKfRWSpFoariHfPnljgv/exec";
     // Handle form submission
 
     document
@@ -350,7 +345,7 @@
         var name = document.getElementById("name").value;
         var phone = document.getElementById("phone").value;
         var email = document.getElementById("email").value;
-        var product = document.getElementById("product").value;
+        // var product = document.getElementById("product").value;
         var quantity = document.getElementById("quantity").value;
         var totalPrice = document.getElementById("totalPrice").value;
 
@@ -360,10 +355,13 @@
         data.append("phone", phone);
         data.append("address", address);
         data.append("email", email);
-        data.append("product", product);
+        // data.append("product", product);
         data.append("quantity", quantity);
         data.append("totalPrice", totalPrice);
         console.log([...data.entries()]); // In ra tất cả dữ liệu trước khi gửi
+
+        var stringFetch1 =
+          "https://script.google.com/macros/s/AKfycbwLdZkHJVvPBw9YlURq_HBGfDQgYi3pt93Qrym21YU9xZrtFU03u2T1h-OtYM0E8psV/exec";
 
         // Send form data to Google Sheets via Apps Script API
         fetch(stringFetch1, {

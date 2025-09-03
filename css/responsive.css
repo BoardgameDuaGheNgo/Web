@@ -30,6 +30,14 @@
 }
 
 @media (max-width: 768px) {
+  .slider_item-container .slider_item-detail {
+    text-align: center;
+  }
+
+  .slider_item-container .slider_item-detail .d-flex {
+    justify-content: center;
+  }
+
   .slider_img-box {
     width: 85%;
     margin: 65px auto;
@@ -85,6 +93,11 @@
     text-align: center;
   }
 
+  .navbar-brand img {
+    width: 30vw;
+    height: auto;
+  }
+
   .slider_item-container .slider_item-detail .d-flex {
     justify-content: center;
   }
@@ -102,5 +115,26 @@
 @media (min-width: 1200px) {
   .container {
     max-width: 1170px;
+  }
+}
+
+@media (min-width: 576px) {
+  .card-deck {
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  .card-deck .card {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex: 1 0 0%;
+    flex: 1 0 0%;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-right: 10px;
+    margin-bottom: 0;
+    margin-left: 10px;
   }
 }

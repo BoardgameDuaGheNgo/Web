@@ -15,7 +15,7 @@ body {
 }
 
 .layout_padding {
-  padding: 75px 0;
+  padding: 5.21vw 0;
 }
 
 .layout_padding2 {
@@ -76,6 +76,7 @@ body {
 
 .custom_heading-text {
   text-align: center;
+  font-size: 1.5rem;
 }
 
 /*header section*/
@@ -154,7 +155,7 @@ a:focus {
 }
 
 .navbar-brand img {
-  width: 200px;
+  width: 13.89vw;
   margin-right: 5px;
 }
 
@@ -181,19 +182,20 @@ a:focus {
 
 .quote_btn-container a {
   font-family: "Besides", sans-serif;
+  line-height: 5vh;
   display: inline-block;
   padding: 5px 15px;
   background-color: #dee11d;
   color: #221f1f;
-  font-size: 1rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
   border-radius: 2px;
   text-align: center;
-  border: 1px solid transparent;
+  border: 3px solid transparent;
 }
 
 .quote_btn-container a:hover {
-  border: 1px solid #dee11d;
+  border: 3px solid #dee11d;
   background-color: #221f1f;
   color: #dee11d;
 }
@@ -231,19 +233,19 @@ a:focus {
   background-repeat: no-repeat;
 }
 
-.slider_item-container .slider_item-detail {
-}
+/* .slider_item-container .slider_item-detail {
+} */
 
 .slider_item-detail h1 {
   font-family: "Besides", sans-serif;
   font-weight: 700;
   font-size: 60px;
-  width: 95%;
-  margin-top: 80px;
+  margin-top: 5.56vw;
+  margin-bottom: 3vw;
 }
 
 .slider_item-detail {
-  margin-left: 10px;
+  margin-bottom: 10vw;
 }
 
 .slider_item-detail p {
@@ -299,17 +301,17 @@ a:focus {
 
 /* service section */
 .service_section .card .card-img-top {
-  width: 50px;
-  margin: 55px auto 5px auto;
+  width: 100px;
+  margin: 15px auto 5px auto;
 }
 
 .service_section .card {
-  text-align: center;
   box-sizing: border-box;
   position: relative;
 }
 
 .service_section .card .card-title {
+  text-align: center;
   color: #dee11d;
   font-weight: bold;
 }
@@ -508,6 +510,10 @@ a:focus {
   font-size: 16px;
   cursor: pointer;
   border-radius: 5px;
+}
+
+.contact_form-container button:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* contact section */

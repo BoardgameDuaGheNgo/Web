@@ -164,7 +164,7 @@
 
       <section class="service_section layout_padding">
         <div class="container">
-          <h2 class="custom_heading">ĐuaGheNgo</h2>
+          <h1 class="custom_heading">ĐuaGheNgo</h1>
           <p class="custom_heading-text">
             Chèo nhanh – Lật thế – Về đích trước!
           </p>
@@ -174,11 +174,10 @@
                 <img
                   class="card-img-top"
                   src="images/4.png"
-                  style="width: 100px"
                   alt="Card image cap"
                 />
                 <div class="card-body">
-                  <h5 class="card-title">Giới thiệu</h5>
+                  <h4 class="card-title">Giới thiệu</h4>
                   <p class="card-text">
                     Đua Ghe Ngo – một board game chiến thuật đầy sống động, nơi
                     bạn sẽ được hòa mình vào không khí lễ hội Ok Om Bok tưng
@@ -201,10 +200,9 @@
                   class="card-img-top"
                   src="images/5.png"
                   alt="Card image cap"
-                  style="width: 100px"
                 />
                 <div class="card-body">
-                  <h5 class="card-title">Tầm nhìn</h5>
+                  <h4 class="card-title">Tầm nhìn</h4>
                   <p class="card-text">
                     Chúng tôi ấp ủ ước mơ biến Đua Ghe Ngo thành board game văn
                     hóa hàng đầu Việt Nam. Không chỉ được cộng đồng người chơi
@@ -220,10 +218,9 @@
                   class="card-img-top"
                   src="images/6.png"
                   alt="Card image cap"
-                  style="width: 100px"
                 />
                 <div class="card-body">
-                  <h5 class="card-title">Sứ mệnh</h5>
+                  <h4 class="card-title">Sứ mệnh</h4>
                   <p class="card-text">
                     Chúng tôi sứ mệnh sử dụng Đua Ghe Ngo để:<br />
                     Bảo tồn & Lan tỏa Văn hóa: Giới thiệu và lan tỏa giá trị lễ
@@ -544,13 +541,13 @@
             "
           >
             <!-- Logo and Company Info -->
-            <div style="flex-basis: 30%; padding: 10px">
+            <div style="padding: 5px">
               <h4 style="color: #dee11d">Đua Ghe Ngo</h4>
-              <p>Chèo nhanh – Lật thế – Về đích trước!</p>
+              <p>Chèo nhanh – Lật thế – Về đích trước !</p>
             </div>
 
             <!-- Quick Links -->
-            <div style="flex-basis: 20%; padding: 10px">
+            <div style="padding: 5px">
               <h4 style="color: #dee11d">Quick Links</h4>
               <ul style="list-style-type: none; padding: 0">
                 <li>
@@ -589,7 +586,7 @@
             </div>
 
             <!-- Contact Info -->
-            <div style="flex-basis: 25%; padding: 10px">
+            <div style="padding: 5px">
               <h4 style="color: #dee11d">Contact Us</h4>
               <p>Email: dgn.boardgame@gmail.com</p>
               <p>Facebook: Boardgame Đua Ghe Ngo</p>
@@ -597,7 +594,7 @@
             </div>
 
             <!-- Social Links -->
-            <div style="flex-basis: 20%; padding: 10px">
+            <div style="padding: 5px">
               <h4 style="color: #dee11d">Follow Us On</h4>
               <div class="social-box" style="display: flex">
                 <a
@@ -634,20 +631,20 @@
 
   <script>
     // Update total price when product or quantity is changed
-    document
-      .getElementById("product")
-      .addEventListener("change", calculateTotal);
+    // document
+    //   .getElementById("product")
+    //   .addEventListener("change", calculateTotal);
     document
       .getElementById("quantity")
       .addEventListener("input", calculateTotal);
 
     function calculateTotal() {
-      var product = document.getElementById("product");
-      var selectedProduct = product.options[product.selectedIndex];
+      // var product = document.getElementById("product");
+      // var selectedProduct = product.options[product.selectedIndex];
       // var price = selectedProduct
       //   ? parseInt(selectedProduct.getAttribute("data-price"))
       //   : 0;
-      var price = 0;
+      var price = 10000;
       var quantity = parseInt(document.getElementById("quantity").value) || 0;
       var totalPrice = price * quantity;
       document.getElementById("totalPrice").value = totalPrice
@@ -688,7 +685,7 @@
         console.log([...data.entries()]); // In ra tất cả dữ liệu trước khi gửi
 
         var stringFetch1 =
-          "https://script.google.com/macros/s/AKfycbwaYs9cnv0SB9TcQ27NsnAUeMQu-rfHodXM5LKjOJY4j4GmcKfRWSpFoariHfPnljgv/exec";
+          "https://script.google.com/macros/s/AKfycbwLdZkHJVvPBw9YlURq_HBGfDQgYi3pt93Qrym21YU9xZrtFU03u2T1h-OtYM0E8psV/exec";
 
         // Send form data to Google Sheets via Apps Script API
         fetch(stringFetch1, {
