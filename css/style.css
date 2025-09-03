@@ -350,17 +350,17 @@ a:focus {
 
 /* Cột thành viên */
 .team_section .col-md-4 {
+  padding: 15px;
   flex: 1 1 20%;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 /* Hình ảnh thành viên */
 .team_member img {
   width: 100px;
   aspect-ratio: 1 / 1;
-  border-radius: 50%;
+  border-radius: 25%;
 }
 .slider_img-box1 img {
   width: 70%;
@@ -369,8 +369,16 @@ a:focus {
 }
 /* Hiệu ứng hover */
 .team_member:hover {
-  transform: translateY(-5px);
 }
+
+.col-md-4:hover {
+  border-radius: 12px;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
 .fruit_section {
   margin: 100px 0;
 }
@@ -383,14 +391,9 @@ a:focus {
 
 /* end client section */
 /* Thay đổi cách hiển thị cho thiết bị di động */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .team_section .row {
     flex-wrap: wrap;
-  }
-
-  .team_section .col-md-4 {
-    flex: 1 1 100%;
-    margin-bottom: 20px;
   }
 
   .team_member {
@@ -567,8 +570,7 @@ a:focus {
 /* end info section */
 /* footer section*/
 .footer-link {
-  color: white !important;
-  text-decoration: none !important;
+  text-decoration: none;
 
   padding: 5px 0;
   display: block;
@@ -577,17 +579,19 @@ a:focus {
 
 .footer-link:hover {
   color: #dee11d !important;
-
   text-decoration: underline !important;
 }
 
 .footer-link:active {
-  color: #dee11d !important;
+  color: #454609 !important;
   /* Màu khi click */
   text-decoration: underline !important;
   /* Giữ gạch chân khi click */
 }
 
+.contact-info a {
+  color: white;
+}
 /* end footer section*/
 
 /* footer section*/
