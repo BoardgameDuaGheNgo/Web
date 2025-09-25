@@ -760,6 +760,11 @@ a:focus {
 .contact-info a {
   color: white;
 }
+
+.contact-info a span:hover {
+  color: #dee11d;
+}
+
 /* end footer section*/
 
 /* footer section*/
