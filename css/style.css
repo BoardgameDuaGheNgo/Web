@@ -761,7 +761,7 @@ a:focus {
   color: white;
 }
 
-.contact-info a span:hover {
+.contact-info p a:hover {
   color: #dee11d;
 }
 
