@@ -12,6 +12,51 @@
   }
 }
 
+/* CSS đặc biệt để khắc phục nhảy chữ trên màn hình nhỏ hưn 1024px */
+@media (max-width: 1023px) {
+  /* Sử dụng margin method cho service cards trên màn hình nhỏ */
+  .service_section .card:hover {
+    cursor: pointer;
+    border: none;
+    border-radius: 0;
+    margin-top: -5px;
+    margin-bottom: 30px;
+    transform: none; /* Tắt transform */
+    box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Sử dụng margin method cho team members trên màn hình nhỏ */
+  .col-md-4:hover {
+    border-radius: 12px;
+    margin-top: -10px;
+    margin-bottom: 30px;
+    transform: none; /* Tắt transform */
+    cursor: pointer;
+    box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* CSS cho màn hình 768px-1023px - hiển thị 3 thẻ ngang */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .service_section .card-deck {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .service_section .card {
+    min-height: 420px; /* Chiều cao tối thiểu cho 3 thẻ bằng nhau */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .service_section .card .card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+    padding-bottom: 25px;
+  }
+}
 @media (max-width: 992px) {
   .custom_nav-container .nav_search-btn {
     background-position: center;
@@ -86,6 +131,18 @@
   .tasty_section h2 {
     font-size: 80px;
   }
+
+  /* Tối ưu tasty_section cho màn hình tablet */
+  .tasty_section {
+    background-attachment: scroll; /* Tắt parallax trên mobile */
+    height: 400px; /* Giảm chiều cao */
+    margin-left: -50vw;
+    margin-right: -50vw;
+    left: 50%;
+    right: 50%;
+    width: 100vw;
+    max-width: 100vw;
+  }
 }
 
 @media (max-width: 576px) {
@@ -107,14 +164,240 @@
 }
 
 @media (max-width: 400px) {
+  /* Khắc phục nhảy chữ cho màn hình nhỏ */
+  .service_section .card {
+    margin-bottom: 20px;
+  }
+
+  .service_section .card:hover {
+    margin-top: -3px;
+    margin-bottom: 23px;
+  }
+
+  .team_section .col-md-4 {
+    margin-bottom: 15px;
+  }
+
+  .col-md-4:hover {
+    margin-top: -5px;
+    margin-bottom: 20px;
+  }
+
+  .tasty_section h2 {
+    font-size: 60px;
+  }
+
+  /* Tối ưu tasty_section cho màn hình nhỏ */
+  .tasty_section {
+    height: 300px;
+    background-attachment: scroll;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    left: 50%;
+    right: 50%;
+    width: 100vw;
+    max-width: 100vw;
+    filter: contrast(1.05) saturate(1.02) brightness(1.01);
+  }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 375px) {
+  /* CSS đặc biệt cho màn hình 375px */
+  .service_section .card {
+    margin-bottom: 15px;
+  }
+
+  .service_section .card:hover {
+    margin-top: -2px;
+    margin-bottom: 17px;
+  }
+
+  .team_section .row {
+    gap: 10px;
+  }
+
+  .team_section .col-md-4 {
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+
+  .col-md-4:hover {
+    margin-top: -3px;
+    margin-bottom: 13px;
+  }
+
+  .custom_heading {
+    font-size: 1.5rem;
+  }
+
+  .custom_heading-text {
+    font-size: 1rem;
+  }
+
+  .slider_item-detail h1 {
+    font-size: 28px;
+  }
+
+  .tasty_section h2 {
+    font-size: 40px;
+  }
+  /* Tối ưu tasty_section cho màn hình rất nhỏ */
+  .tasty_section {
+    height: 250px;
+    background-attachment: scroll;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    left: 50%;
+    right: 50%;
+    width: 100vw;
+    max-width: 100vw;
+    filter: contrast(1.02) saturate(1.01);
+  }
+}
+
+/* Giảm padding cho các nút để tránh nhảy layout */
+.custom_dark-btn,
+.custom_orange-btn {
+  width: 120px;
+  padding: 8px 0;
+}
+
+.quote_btn-container a {
+  padding: 3px 10px;
+  font-size: 1rem;
+}
+
+@media (min-width: 1024px) {
+  /* Đảm bảo layout ổn định trên màn hình lớn */
+  .service_section .card-deck {
+    display: flex;
+    align-items: stretch; /* Đảm bảo tất cả card có cùng chiều cao */
+  }
+
+  .service_section .card {
+    margin-bottom: 0; /* Xóa margin-bottom không cần thiết */
+    height: auto; /* Cho phép tự động điều chỉnh */
+    min-height: 450px; /* Chiều cao tối thiểu cho 3 thẻ bằng nhau */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .service_section .card .card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: flex-start; /* Căn chỉnh từ trên */
+    padding-bottom: 25px;
+  }
+
+  .service_section .card .card-text {
+    flex-grow: 1; /* Text mở rộng để đẩy các element khác xuống */
+  }
+
+  .team_section .row {
+    align-items: flex-start; /* Căn chỉnh từ trên xuống */
+  }
+
+  .team_section .col-md-4 {
+    margin-bottom: 0; /* Xóa margin-bottom không cần thiết trên màn lớn */
+    min-height: 220px; /* Chiều cao tối thiểu cho team members */
+  }
+}
+
+/* CSS riêng cho màn hình 1024px-1199px để khắc phục lỗi thẻ không đều */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .service_section .card {
+    min-height: 480px !important; /* Tăng chiều cao cho khoảng này */
+    max-height: none;
+  }
+
+  .service_section .card .card-body {
+    padding: 1.25rem;
+    padding-bottom: 30px !important;
+    justify-content: space-between; /* Phân bố đều nội dung */
+  }
+
+  .service_section .card .card-title {
+    margin-bottom: 1rem;
+  }
+
+  .service_section .card .card-text {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
+/* CSS đặc biệt cho màn hình 1211px+ để khắc phục hoàn toàn rớt chữ */
+@media (min-width: 1211px) {
+  /* Service section - đảm bảo không rớt chữ */
+  .service_section .card-deck {
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 40px; /* Thêm khoảng cách dưới để tránh overlap */
+  }
+
+  .service_section .card {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 480px !important; /* Tăng chiều cao cho màn hình rất lớn */
+    margin-bottom: 0;
+    position: relative;
+    overflow: visible;
+  }
+
+  .service_section .card .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 35px !important; /* Tăng padding cho màn lớn */
+  }
+
+  /* Sử dụng scale thay vì translateY để tránh rớt chữ */
+  .service_section .card:hover {
+    transform: scale(1.03) translateZ(0); /* Sử dụng scale và hardware acceleration */
+    z-index: 10;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Team section - đảm bảo không rớt chữ */
+  .team_section {
+    padding-bottom: 50px;
+  }
+
+  .team_section .col-md-4 {
+    min-height: 250px;
+    margin-bottom: 0;
+  }
+
+  .col-md-4:hover {
+    transform: scale(1.05) translateZ(0);
+    z-index: 10;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 @media (min-width: 1200px) {
   .container {
     max-width: 1170px;
+  }
+
+  /* Override lại cho màn hình lớn hưn 1200px */
+  .service_section .card {
+    min-height: 450px !important; /* Giảm lại chiều cao chuẩn */
+  }
+
+  .service_section .card .card-body {
+    padding-bottom: 25px !important;
   }
 }
 
@@ -136,5 +419,15 @@
     margin-right: 10px;
     margin-bottom: 0;
     margin-left: 10px;
+    min-height: 400px; /* Đảm bảo chiều cao tối thiểu cho tất cả thẻ */
+  }
+
+  /* Đảm bảo card-body có chuẩn flex layout */
+  .service_section .card .card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+    padding-bottom: 20px;
   }
 }

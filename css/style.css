@@ -12,6 +12,39 @@ body {
   font-family: "ganh-type-regular", sans-serif;
   color: #000000;
   background-color: #fbfbfb;
+  overflow-x: hidden; /* Chỉ tắt thanh cuộn ngang */
+  overflow-y: auto; /* Cho phép cuộn dọc */
+  scroll-behavior: smooth;
+}
+
+/* Ẩn thanh cuộn nhưng vẫn cho phép cuộn */
+html {
+  overflow-x: hidden; /* Tắt thanh cuộn ngang */
+  overflow-y: auto; /* Cho phép cuộn dọc */
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  background: transparent;
+}
+
+/* Firefox */
+html {
+  scrollbar-width: none;
+}
+
+/* Đảm bảo không overflow cho các sections */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Đặc biệt cho team_section để tránh ảnh hưởng bởi global scroll settings */
+.team_section * {
+  box-sizing: border-box;
 }
 
 .layout_padding {
@@ -51,6 +84,7 @@ body {
 
 .custom_dark-btn {
   background-color: #221f1f;
+  border: 2px solid #221f1f; /* Thêm border với màu background để giữ kích thước */
 }
 
 .custom_dark-btn:hover {
@@ -61,6 +95,7 @@ body {
 
 .custom_orange-btn {
   background-color: #dee11d;
+  border: 2px solid #dee11d; /* Thêm border với màu background để giữ kích thước */
 }
 
 .custom_orange-btn:hover {
@@ -82,10 +117,23 @@ body {
 /*header section*/
 .hero_area {
   background-color: #ffffff;
+  overflow-x: hidden; /* Đảm bảo không overflow ngang */
 }
 
 .hero_area.sub_pages {
   height: auto;
+}
+
+/* Đảm bảo container không gây overflow */
+.container,
+.container-fluid {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Hiệu ứng cuộn mượt cho các anchor links */
+a[href^="#"] {
+  scroll-behavior: smooth;
 }
 
 .header_section {
@@ -331,6 +379,15 @@ a:focus {
 /* end slider section */
 
 /* service section */
+.service_section {
+  overflow: visible; /* Cho phép hiệu ứng scale hiển thị */
+  padding-bottom: 20px; /* Thêm padding để tránh cắt shadow */
+}
+
+.service_section .card-deck {
+  margin-bottom: 20px; /* Thêm khoảng cách dưới để tránh overlap */
+}
+
 .service_section .card .card-img-top {
   width: 100px;
   margin: 15px auto 5px auto;
@@ -340,12 +397,27 @@ a:focus {
   box-sizing: border-box;
   position: relative;
   transition: all 0.3s ease;
+  margin-bottom: 25px; /* Thêm margin để bù trừ hiệu ứng hover trên mobile */
+  display: flex;
+  flex-direction: column; /* Đảm bảo cấu trúc flex */
+}
+
+.service_section .card .card-body {
+  padding: 1rem;
+  padding-bottom: 2rem; /* Thêm padding-bottom mặc định */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Cho phép mở rộng để fill không gian */
 }
 
 .service_section .card .card-title {
   text-align: center;
   color: #dee11d;
   font-weight: bold;
+}
+
+.service_section .card .card-text {
+  flex-grow: 1; /* Cho phép text mở rộng để đẩy các element khác xuống */
 }
 
 .service_section .card::after {
@@ -360,7 +432,7 @@ a:focus {
   cursor: pointer;
   border: none;
   border-radius: 0;
-  transform: translateY(-5px);
+  transform: translateY(-5px); /* Sử dụng transform cho màn hình lớn */
   box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -371,6 +443,16 @@ a:focus {
 /* end service section */
 
 /* client section */
+.team_section {
+  overflow-y: hidden; /* Chỉ ẩn thanh cuộn dọc cho team_section */
+  overflow-x: visible; /* Vẫn cho phép hiển thị ngang để hiệu ứng hover hoạt động */
+  padding-bottom: 30px;
+}
+
+.team_section .container {
+  overflow-x: visible;
+}
+
 /* Giữ các thành viên xếp trong một hàng ngang */
 .team_section .row {
   display: flex;
@@ -386,6 +468,8 @@ a:focus {
   display: flex;
   justify-content: center;
   transition: all 0.3s ease;
+  margin-bottom: 20px; /* Thêm margin để bù trừ hiệu ứng hover trên mobile */
+  min-height: 200px; /* Đảm bảo chiều cao tối thiểu */
 }
 
 /* Hình ảnh thành viên */
@@ -403,7 +487,7 @@ a:focus {
 
 .col-md-4:hover {
   border-radius: 12px;
-  transform: translateY(-10px);
+  transform: translateY(-10px); /* Giữ nguyên hiệu ứng ban đầu */
   cursor: pointer;
   box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.2);
 }
@@ -434,14 +518,50 @@ a:focus {
 /* tasty section */
 
 .tasty_section {
-  width: 100%;
+  width: 100%; /* Thay vì 100vw để tránh overflow */
+  max-width: 100vw;
   height: 500px;
+  margin: 0; /* Xóa margin-left để tránh vỡ layout */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw; /* Kỹ thuật breakout container */
   background-image: url(../images/ImageSection.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; /* Giữ nguyên kích thước tỷ lệ */
+  background-position: center center; /* Căn giữa hình ảnh */
+  background-attachment: fixed; /* Hiệu ứng parallax nhẹ */
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  /* Tối ưu hóa cho hình ảnh nét hưn */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; /* Thuộc tính chuẩn */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  /* Thêm filter để tăng độ sắc nét */
+  filter: contrast(1.1) saturate(1.05) brightness(1.02);
+}
+
+/* Thêm overlay nhẹ để tăng độ tương phản */
+.tasty_section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.05) 50%,
+    rgba(0, 0, 0, 0.1) 100%
+  ); /* Gradient overlay nhẹ */
+  z-index: 1;
 }
 
 .tasty_section h2 {
@@ -450,6 +570,23 @@ a:focus {
   font-weight: bold;
   color: #ffffff;
   text-transform: uppercase;
+  position: relative;
+  z-index: 2; /* Đảm bảo text nằm trên overlay */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Thêm bóng để nổi bật */
+}
+
+/* Cải thiện hiệu ứng cuộn và performance */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Tối ưu hóa cho mobile và prevent layout shift */
+@media (max-width: 768px) {
+  .tasty_section {
+    background-attachment: scroll !important;
+    transform: none;
+    filter: contrast(1.02) saturate(1.01);
+  }
 }
 
 /* end tasty section */
@@ -546,7 +683,8 @@ a:focus {
 }
 
 .contact_form-container button:hover {
-  transform: translateY(-5px);
+  margin-top: -5px;
+  margin-bottom: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
