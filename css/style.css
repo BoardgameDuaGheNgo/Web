@@ -47,6 +47,10 @@ html {
   box-sizing: border-box;
 }
 
+.member_title {
+  margin-bottom: 0;
+}
+
 .layout_padding {
   padding: 5.21vw 0;
 }
@@ -445,7 +449,7 @@ a:focus {
 /* client section */
 .team_section {
   overflow-y: hidden; /* Chỉ ẩn thanh cuộn dọc cho team_section */
-  overflow-x: visible; /* Vẫn cho phép hiển thị ngang để hiệu ứng hover hoạt động */
+  overflow-x: hidden; /* Vẫn cho phép hiển thị ngang để hiệu ứng hover hoạt động */
   padding-bottom: 30px;
 }
 
@@ -474,13 +478,14 @@ a:focus {
 
 /* Hình ảnh thành viên */
 .team_member img {
-  width: 100px;
+  width: 10.42vw;
   aspect-ratio: 1 / 1;
   border-radius: 25%;
+  object-fit: cover;
 }
+
 .slider_img-box1 img {
   width: 70%;
-
   height: auto;
 }
 /* Hiệu ứng hover */
@@ -504,9 +509,13 @@ a:focus {
 
 /* end client section */
 /* Thay đổi cách hiển thị cho thiết bị di động */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .team_section .row {
     flex-wrap: wrap;
+  }
+
+  .team_member img {
+    width: 19.53vw;
   }
 
   .team_member {
@@ -578,15 +587,6 @@ a:focus {
 /* Cải thiện hiệu ứng cuộn và performance */
 * {
   scroll-behavior: smooth;
-}
-
-/* Tối ưu hóa cho mobile và prevent layout shift */
-@media (max-width: 768px) {
-  .tasty_section {
-    background-attachment: scroll !important;
-    transform: none;
-    filter: contrast(1.02) saturate(1.01);
-  }
 }
 
 /* end tasty section */

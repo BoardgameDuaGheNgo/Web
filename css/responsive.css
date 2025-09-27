@@ -57,6 +57,7 @@
     padding-bottom: 25px;
   }
 }
+
 @media (max-width: 992px) {
   .custom_nav-container .nav_search-btn {
     background-position: center;
@@ -143,6 +144,12 @@
     width: 100vw;
     max-width: 100vw;
   }
+
+  .tasty_section {
+    background-attachment: scroll !important;
+    transform: none;
+    filter: contrast(1.02) saturate(1.01);
+  }
 }
 
 @media (max-width: 576px) {
@@ -172,10 +179,6 @@
   .service_section .card:hover {
     margin-top: -3px;
     margin-bottom: 23px;
-  }
-
-  .team_section .col-md-4 {
-    margin-bottom: 15px;
   }
 
   .col-md-4:hover {
@@ -214,11 +217,6 @@
 
   .team_section .row {
     gap: 10px;
-  }
-
-  .team_section .col-md-4 {
-    margin-bottom: 10px;
-    padding: 10px;
   }
 
   .col-md-4:hover {
@@ -297,11 +295,6 @@
   .team_section .row {
     align-items: flex-start; /* Căn chỉnh từ trên xuống */
   }
-
-  .team_section .col-md-4 {
-    margin-bottom: 0; /* Xóa margin-bottom không cần thiết trên màn lớn */
-    min-height: 220px; /* Chiều cao tối thiểu cho team members */
-  }
 }
 
 /* CSS riêng cho màn hình 1024px-1199px để khắc phục lỗi thẻ không đều */
@@ -369,11 +362,6 @@
   /* Team section - đảm bảo không rớt chữ */
   .team_section {
     padding-bottom: 50px;
-  }
-
-  .team_section .col-md-4 {
-    min-height: 250px;
-    margin-bottom: 0;
   }
 
   .col-md-4:hover {
